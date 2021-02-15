@@ -19,7 +19,10 @@ export default function CharacterDetail({character}) {
       {
           character.status==="Alive" ? <b><p style={{color:"green", padding:"10px",}}>{character.status}</p></b> : <b><p style={{color:"red", fontSize:"24px"}}>{character.status}</p></b>
       }
-        <button style={{backgroundColor:"tomato", border:"none", padding:"10px"}}><a style={{color:"whitesmoke"}} href="/">Get Back</a></button>
+      
+        <Link href="/" as={`/`} >
+            <a ><button style={{backgroundColor:"tomato", border:"none", padding:"10px"}}><a style={{color:"whitesmoke"}} href="/">Get Back</a></button></a>
+            </Link>
       </div>
       {console.log(character.name)}
      
