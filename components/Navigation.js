@@ -17,7 +17,6 @@ export const Navigation = () => {
         <li>
           <Link href="/contactus">
             <a>
-              {" "}
               <b>Contact Us</b>
             </a>
           </Link>

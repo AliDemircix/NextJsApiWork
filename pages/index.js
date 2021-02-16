@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import Layout from "../components/Layout";
+import slug from "slug"
 
 export default function Home({ characters }) {
   return (
@@ -14,7 +15,7 @@ export default function Home({ characters }) {
         {characters.results.map((character) => (
           <li className="card" key={character.id}>
             <img style={{padding:"15px", borderRadius:"10%"}} src={character.image}></img>
-            <Link href="/character/[id]" as={`/character/${character.id}`} >
+            <Link href="/character/[slug]" as={`/character/${slug(character.name)}-${character.id}`} >
             <a><h2>{character.name}</h2></a>
             </Link>
             <p>{character.gender}</p>
